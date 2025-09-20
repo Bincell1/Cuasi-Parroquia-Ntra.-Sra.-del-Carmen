@@ -1,0 +1,207 @@
+:root {
+    --primary-font: 'Lato', sans-serif;
+    --heading-font: 'Playfair Display', serif;
+    
+    /* Light Theme */
+    --bg-color-light: #ffffff;
+    --text-color-light: #333333;
+    --section-bg-light: #f5f5f7;
+    --accent-color-light: #c9a424; /* Gold */
+    --border-color-light: #d2d2d7;
+
+    /* Dark Theme */
+    --bg-color-dark: #121212;
+    --text-color-dark: #e0e0e0;
+    --section-bg-dark: #1e1e1e;
+    --accent-color-dark: #ffd700; /* Brighter Gold for dark mode */
+    --border-color-dark: #333333;
+}
+
+[data-bs-theme="light"] {
+    --bs-body-bg: var(--bg-color-light);
+    --bs-body-color: var(--text-color-light);
+    --bs-secondary-bg: var(--section-bg-light);
+    --bs-primary: var(--accent-color-light);
+    --bs-border-color: var(--border-color-light);
+}
+
+[data-bs-theme="dark"] {
+    --bs-body-bg: var(--bg-color-dark);
+    --bs-body-color: var(--text-color-dark);
+    --bs-secondary-bg: var(--section-bg-dark);
+    --bs-primary: var(--accent-color-dark);
+    --bs-border-color: var(--border-color-dark);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px; /* Ajusta este valor si la altura del navbar cambia */
+}
+
+body {
+    font-family: var(--primary-font);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+    background-color: var(--bs-body-bg) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+#bienvenida {
+    height: calc(100vh - 75px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+    position: relative;
+    color: white;
+    background-image: url('../images/fondo-bienvenida.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#bienvenida::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+#bienvenida > div {
+    position: relative;
+    z-index: 2;
+}
+
+#bienvenida h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+#bienvenida p {
+    font-size: 1.25rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
+
+section {
+    padding: 5rem 0;
+}
+
+.section-divider {
+    margin: 0 auto;
+    max-width: 80%;
+    border-top: 1px solid var(--bs-border-color);
+}
+
+.bg-light {
+    background-color: var(--bs-secondary-bg) !important;
+}
+
+.card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+[data-bs-theme="dark"] .card {
+     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    font-weight: 600;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.form-control {
+    border-radius: 0.5rem;
+    background-color: var(--bs-secondary-bg);
+    border: 1px solid var(--bs-border-color);
+}
+
+.form-control:focus {
+    background-color: var(--bs-body-bg);
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary), 0.25);
+}
+
+.modal-content {
+    border-radius: 1rem;
+    border: none;
+}
+
+#gallery-container .card {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#gallery-container img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Estilos para la sección de Lecturas */
+.inspirational-quote {
+    border-left: 4px solid var(--accent-color-light);
+    padding-left: 1.5rem;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+[data-bs-theme="dark"] .inspirational-quote {
+    border-left-color: var(--accent-color-dark);
+}
+
+.reading-card {
+    background-color: var(--bs-secondary-bg);
+    border: 1px solid var(--bs-border-color);
+    text-align: left;
+    border-radius: 1rem;
+}
+
+.reading-card .card-title {
+    color: var(--accent-color-light);
+    font-weight: 700;
+}
+
+[data-bs-theme="dark"] .reading-card .card-title {
+    color: var(--accent-color-dark);
+}
+
+.reading-card .card-body hr {
+    border-top: 1px solid var(--bs-border-color);
+    opacity: 0.5;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

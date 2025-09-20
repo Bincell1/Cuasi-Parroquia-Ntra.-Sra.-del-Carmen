@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oraciones - Cuasi Parroquia Ntra. Sra. del Carmen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-crosshair"></i>
+                Cuasi Parroquia Ntra. Sra. del Carmen
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#bienvenida">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#inicio">Lecturas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#eventos">Eventos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#noticias">Noticias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#galeria">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="oraciones.html">Oraciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#donar">Donar</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <button id="theme-toggler" class="btn btn-sm nav-link" type="button">
+                            <i class="bi" id="theme-icon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Secciones de Oraciones -->
+    <main class="container py-5">
+        
+        <!-- Oración del Día -->
+        <section id="oracion-dia" class="text-center mb-5">
+            <h2 class="mb-4">Oración del Día</h2>
+            <div class="card w-75 mx-auto">
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p id="daily-prayer-text">Cargando oración...</p>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Oraciones Frecuentes -->
+        <section id="oraciones-frecuentes" class="py-5">
+            <h2 class="text-center mb-4">Oraciones Frecuentes</h2>
+            <div class="accordion w-75 mx-auto" id="accordion-oraciones">
+                
+                <!-- Padre Nuestro -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-padre-nuestro">
+                            Padre Nuestro
+                        </button>
+                    </h2>
+                    <div id="collapse-padre-nuestro" class="accordion-collapse collapse" data-bs-parent="#accordion-oraciones">
+                        <div class="accordion-body">
+                            Padre nuestro, que estás en el cielo, santificado sea tu Nombre; venga a nosotros tu reino; hágase tu voluntad en la tierra como en el cielo. Danos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación, y líbranos del mal. Amén.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ave María -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-ave-maria">
+                            Ave María
+                        </button>
+                    </h2>
+                    <div id="collapse-ave-maria" class="accordion-collapse collapse" data-bs-parent="#accordion-oraciones">
+                        <div class="accordion-body">
+                            Dios te salve, María, llena eres de gracia, el Señor es contigo. Bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gloria -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-gloria">
+                            Gloria
+                        </button>
+                    </h2>
+                    <div id="collapse-gloria" class="accordion-collapse collapse" data-bs-parent="#accordion-oraciones">
+                        <div class="accordion-body">
+                            Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Salmo 23 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-salmo-23">
+                            Salmo 23
+                        </button>
+                    </h2>
+                    <div id="collapse-salmo-23" class="accordion-collapse collapse" data-bs-parent="#accordion-oraciones">
+                        <div class="accordion-body">
+                            El Señor es mi pastor, nada me falta; en verdes pastos me hace descansar. Junto a tranquilas aguas me conduce; me infunde nuevas fuerzas. Me guía por sendas de justicia por amor a su nombre. Aun si voy por valles tenebrosos, no temo peligro alguno porque tú estás a mi lado; tu vara de pastor me reconforta. Dispones ante mí un banquete en presencia de mis enemigos. Has ungido con perfume mi cabeza; has llenado mi copa a rebosar. La bondad y el amor me seguirán todos los días de mi vida; y en la casa del Señor habitaré para siempre.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+        <div class="container text-center">
+            <p>&copy; 2025 Cuasi Parroquia Ntra. Sra. del Carmen. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/oraciones.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Parroquia Ntra. Sra. del Carmen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-shield-check"></i>
+                Panel de Administración
+            </a>
+            <a href="index.html" class="btn btn-outline-primary">Volver al Sitio</a>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <h1 class="text-center mb-5">Gestionar Contenido</h1>
+
+        <!-- Gestionar Eventos -->
+        <section id="admin-eventos" class="mb-5">
+            <h2>Eventos</h2>
+            <form id="form-add-event" class="mb-4 p-4 border rounded">
+                <div class="row g-3 align-items-end">
+                    <div class="col-md-4">
+                        <label for="event-date" class="form-label">Fecha</label>
+                        <input type="date" id="event-date" class="form-control" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="event-time" class="form-label">Horario</label>
+                        <input type="time" id="event-time" class="form-control" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="event-name" class="form-label">Nombre del Evento</label>
+                        <input type="text" id="event-name" class="form-control" required>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-primary w-100">Agregar</button>
+                    </div>
+                </div>
+            </form>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr><th>Fecha</th><th>Horario</th><th>Evento</th><th>Acción</th></tr>
+                    </thead>
+                    <tbody id="events-list"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Gestionar Noticias -->
+        <section id="admin-noticias" class="mb-5">
+            <h2>Noticias</h2>
+            <form id="form-add-news" class="mb-4 p-4 border rounded">
+                <div class="mb-3">
+                    <label for="news-title" class="form-label">Título</label>
+                    <input type="text" id="news-title" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="news-text" class="form-label">Texto</label>
+                    <textarea id="news-text" class="form-control" rows="3" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="news-img" class="form-label">URL de la Imagen</label>
+                    <input type="text" id="news-img" class="form-control" placeholder="ej: images/noticia.jpg" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Agregar Noticia</button>
+            </form>
+            <div id="news-list" class="row g-4"></div>
+        </section>
+
+        <!-- Gestionar Galería -->
+        <section id="admin-gallery" class="mb-5">
+            <h2>Galería de Fotos</h2>
+            <form id="form-add-gallery" class="mb-4 p-4 border rounded">
+                <div class="row g-3 align-items-end">
+                    <div class="col-md-10">
+                        <label for="gallery-img" class="form-label">URL de la Imagen</label>
+                        <input type="text" id="gallery-img" class="form-control" placeholder="ej: images/foto.jpg" required>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-primary w-100">Agregar Foto</button>
+                    </div>
+                </div>
+            </form>
+            <div id="gallery-list" class="row g-4"></div>
+        </section>
+
+    </main>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
